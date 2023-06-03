@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:'font-main';
+    src:url(fonte/Satisfy-Regular.ttf) format(truetype) ;
+}
+@font-face {
+    font-family:'font-name';
+    src:url(fonte/OleoScript-Bold.ttf) format(truetype);
+}
+@media screen and (min-width: 501px) {
+    h1 {
+        font-size: 3em;
+        border: 200px solid black;
+        border-image: url(image/cloud4.png) stretch;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.5em;
+        border:30px solid black;
+        border-image: url(image/cloud4.png) stretch;
+    }
+    
+}
+
+@media screen and (min-width: 501px) {
+    h1 {
+        font-size: 3em;
+        border: 200px solid black;
+        border-image: url(image/cloud4.png) stretch;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.5em;
+        border:30px solid black;
+        border-image: url(image/cloud4.png) stretch;
+    }
+    
+}
+
+/* Fundo */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(ellipse at center, #ECFCFF 10%,#B2FCFF 30%,#5EDFFF 35%,#3E64FF 70%);
+    overflow-x: hidden;
+}
+/* Nuvem grande*/
+
+.presentation{
+    max-height: 800px;
+}
+/*texto do about me numa tela estreia fica com muito espaço lateral*/
+
+h1{
+    font-family: font-main,serif;
+    padding: 15px 30px;
+    border-image: url(image/cloud4.png) 90 fill;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%; 
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1:hover{
+    box-shadow: 5px 5px 30px 30px #b2fcff23;
+}
+
+.logo{
+    height:80px ;
+    opacity: 0.8;
+}
+
+strong{
+    font-family: font-name,serif;
+    font-size: 2em;
+}
+
+/* Botão de navegaçao entre páginas */
+
+.cloud-button{
+    border: 20px solid black;
+    border-image: url(image/cloud4.png) 25 fill;
+    background-color:transparent; 
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    height: 9vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 8em;
+    min-height: 4em; 
+}
+
+button{
+    font-family: font-main,serif;
+    font-size: 1.8em;
+    background-color: transparent;
+    border: none;
+}
+.cloud-button:hover{
+    color: #3E64FF;
+    width: 20vw;
+    height: 10vw; 
+    min-width: 10em;
+    min-height: 5em;    
+}
+button:hover{
+    font-size: 2.2em;
+    color: #3E64FF;
+}
+
+#pc{
+    min-width: 70px;
+    width: 20vw;
+    max-width: 200px;
+    position:absolute;
+    left: 20px;
+    bottom: 5px;   
+}
+
+/* Link igual ao botão de navegação*/
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #3E64FF;
+}
+
+/* Página do menu */
+
+.grid{
+ display: flex;
+ align-items: center;
+ justify-content: center;   
+ flex-wrap: wrap;
+ flex-direction: row;
+}
+
+/* Nuvem pequena
+com uma tela muito estreita desapareçe uma nuvem ???*/
+
+.menu{
+    border: 30px solid transparent;
+    border-image: url(image/cloud4.png) 50 fill;
+    background-color: transparent;
+    margin-bottom: 50px;
+    width: 20vw;
+    min-width: 250px;;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+.menu:hover{
+    width: 25vw;
+    height: 12.5vw;
+    min-height: 180px;
+}
+h2{
+   font-family: font-main, serif;
+   font-size: 2em;
+   margin:0;
+   padding:0;
+}
+
+div > p{
+ display: none;
+}
+div:hover > p{
+    display: block;
+}
+p{
+    padding: 0px 30px;
+    font-size: 1.2em;
+    text-align: center;
+}
+ul{
+}
+li{
+   list-style-type: "\2605";  
+}

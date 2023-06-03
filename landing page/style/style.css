@@ -26,8 +26,8 @@
 /* Fundo */
 
 body{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -42,15 +42,15 @@ body{
     max-width: 1200px;
     
 }
-/*texto do about me numa tela estreia fica com muito espaço lateral*/
+
 
 .presentation-b {
     width: 80%;
     background-color: transparent;
     border: 30px solid black;
     border-image: url(../image/cloud-mold4.png) 120 repeat;
-    margin:0;
     padding:0;
+    margin-right: 30px;
 
 }
 .presentation-b > p{
@@ -58,7 +58,6 @@ body{
     font-size: 3em;
     padding: 0;
     background-color:transparent;
-    border-radius: 50%;
     display: flex;   
     align-items: center;
     justify-content: center;
@@ -85,7 +84,7 @@ h1:hover{
     opacity: 0.9;
 }
 .logom{
-    height:100px ;
+    height:80px ;
 }
 
 strong{
@@ -151,7 +150,12 @@ a:hover{
 
 /* Página do menu */
 
+/* Nuvem pequena
+com uma tela muito estreita desapareçe uma nuvem ???*/
+
 .grid{
+ height: 100%; /*fix*/
+ width: 80%;
  display: flex;
  align-items: center;
  justify-content: center;   
@@ -159,14 +163,10 @@ a:hover{
  flex-direction: row;
 }
 
-/* Nuvem pequena
-com uma tela muito estreita desapareçe uma nuvem ???*/
-
 .menu{
     border: 30px solid transparent;
     border-image: url(../image/cloud.png) 50 fill;
     background-color: transparent;
-    margin-bottom: 50px;
     width: 20vw;
     min-width: 250px;;
     height: 10em;
@@ -197,7 +197,7 @@ div:hover > p{
 p{
     font-family: font-main, serif;
     padding: 0px 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
 ul{

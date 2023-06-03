@@ -81,8 +81,11 @@ h1:hover{
 }
 
 .logo{
-    height:80px ;
-    opacity: 0.8;
+    width: 200px ;
+    opacity: 0.9;
+}
+.logom{
+    height:100px ;
 }
 
 strong{
@@ -173,6 +176,7 @@ com uma tela muito estreita desapareçe uma nuvem ???*/
     flex-direction: column;   
 }
 .menu:hover{
+    transition: .3s;
     width: 25vw;
     height: 12.5vw;
     min-height: 180px;
@@ -191,12 +195,13 @@ div:hover > p{
     display: block;
 }
 p{
+    font-family: font-main, serif;
     padding: 0px 30px;
-    font-size: 1.2em;
+    font-size: 2em;
     text-align: center;
 }
 ul{
 }
 li{
-   list-style-type: "\2605";  
+   list-style-type:"\2605";  
 }

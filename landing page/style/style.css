@@ -22,7 +22,12 @@
         border-image: url(../image/cloud.png) stretch;
     }       
 }
-
+@media screen and (max-width: 600px) {
+    .presentation-b >p {
+    font-size: 1em;
+    overflow: auto;
+    }
+}
 /* Fundo */
 
 body{
@@ -45,7 +50,6 @@ body{
 
 .presentation-b {
     width: 80%;
-    height: 80%;
     background-color: transparent;
     border: 30px solid black;
     border-image: url(../image/cloud-mold4.png) 120 repeat;
@@ -154,7 +158,7 @@ a:hover{
 com uma tela muito estreita desapareçe uma nuvem ???*/
 
 .grid{
- height: 80%; /*fix*/
+ height: 50%; /*fix*/
  width: 80%;
  display: flex;
  align-items: center;

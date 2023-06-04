@@ -8,92 +8,90 @@
     font-family:'font-name';
     src:url(../fonte/OleoScript-Bold.ttf) format(truetype);
 }
-@media screen and (min-width: 1180px) {
-    h1 {
-        font-size: 3em;
-        border: 200px solid black;
+@media screen and (max-width: 600px) {
+    h1 ,.presentation-b > p{
+        font-size: 1em; 
+    }
+}
+@media screen and (min-width: 601px) {
+    h1 ,.presentation-b > p {
+        font-size: 1.2em; 
     }
 }
 
-@media screen and (max-width: 1179px) {
-    h1 {
-        font-size: 1.5em;
-        border: 100px solid black;
-        border-image: url(../image/cloud.png) stretch;
+@media screen and (min-width: 1200px) {
+    h1, .presentation-b > p{
+        font-size: 3em;
     }       
 }
-@media screen and (max-width: 600px) {
-    .presentation-b >p {
-    font-size: 1em;
-    overflow: auto;
-    }
-}
+ *{
+    margin:0;
+    padding: 0;
+    font-family: font-main, serif;
+ }
 /* Fundo */
 
 body{
-    margin: 10px;
-    padding: 10px;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(ellipse at center, #ECFCFF 10%,#B2FCFF 30%,#5EDFFF 35%,#3E64FF 70%);
-    overflow-x: hidden;
 }
 /* Nuvem grande*/
 
 .presentation{
-    max-width: 1200px;
-    
+    width: 100%;
+    max-width:1000px;
+    min-width:200px;
+    height: 100%;
+    background-image: url(../image/cloud.png); 
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size:105%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
 }
+h1{
+    padding: 20px 40px;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*moldura*/
 
 .presentation-b {
-    width: 80%;
-    background-color: transparent;
-    border: 30px solid black;
-    border-image: url(../image/cloud-mold4.png) 120 repeat;
-    padding:0;
-    margin-right: 30px;
-
+    width: 90%;
+    max-width:1000px;
+    min-width:250px;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+    
 .presentation-b > p{
-    font-family: font-main,serif;
-    font-size: 3em;
-    padding: 0;
+    padding: 5px, 10px;
     background-color:transparent;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-h1{
-    font-family: font-main,serif;
-    padding: 20px 40px;
-    border-image: url(../image/cloud.png) 90 fill;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 50%; 
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-h1:hover{
-    box-shadow: 0px 0px 30px #b2fcff1c;
+    border: 40px solid black;
+    border-image: url(../image/cloud-mold4.png) 95 repeat;
 }
 
 .logo{
-    width: 200px ;
-    opacity: 0.9;
+    width: 3em ;
+    opacity: 0.7;
 }
 .logom{
-    height:80px ;
+    width: 10em;
 }
 
 strong{
-    font-family: font-name,serif;
-    font-size: 2em;
+    font-weight: bolder;
+    color: #3E64FF;
+    font-family: font-name, 'Times New Roman', Times, serif ;
 }
 
 /* Botão de navegaçao entre páginas */
@@ -190,22 +188,26 @@ h2{
    font-size: 2em;
    margin:0;
    padding:0;
+   text-align: center;   
 }
 
-div > p{
+h2 > p{
+font-family: font-main, sans-serif;
+font-weight: lighter;
  display: none;
+ font-size: 0.7em;
+ color: black;
 }
-div:hover > p{
+h2:hover > p{
     display: block;
 }
-p{
-    font-family: font-main, serif;
-    padding: 0px 30px;
-    font-size: 1.5em;
-    text-align: center;
+h2:hover{
+    color:#3E64FF;
 }
+
 ul{
 }
 li{
-   list-style-type:"\2605";  
+   list-style-type:"\2605"; 
+   font-family: font-main; 
 }

@@ -10,18 +10,18 @@
 }
 @media screen and (max-width: 600px) {
     h1 ,.presentation-b > p{
-        font-size: 1em; 
+        font-size: 2em; 
     }
 }
 @media screen and (min-width: 601px) {
     h1 ,.presentation-b > p {
-        font-size: 1.2em; 
+        font-size: 2.5em; 
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     h1, .presentation-b > p{
-        font-size: 3em;
+        font-size: 3.2em;
     }       
 }
  *{
@@ -67,18 +67,23 @@ h1{
     width: 90%;
     max-width:1000px;
     min-width:250px;
-    display: flex;   
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
     
 .presentation-b > p{
-    padding: 5px, 10px;
+    min-height:500px ;
+    padding: 10px, 20px;
     background-color:transparent;
     border: 40px solid black;
     border-image: url(../image/cloud-mold4.png) 95 repeat;
+    text-indent: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
+
 
 .logo{
     width: 3em ;

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*cores
+#FA7841
+#FAD341
+*/
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body, html{
+    background-color:#FA7841;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+section#login{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548);
+    overflow: hidden;
+    display: block;
+}
+div#img{
+    background: black url(../imagens/pattern1.jpg);
+    background-size: cover;
+    height: 200px;
+    display: block;
+}
+div#form{
+    display: block;
+    padding: 10px;
+}
+div#form h1{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+div#form p{
+    font-size: 1em;
+    text-align: center;
+}
+.fill{
+    background-color:#FA7841;
+    display: block;
+    width: 100%;
+    height: 41px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+.fill label{
+    display: none;
+}
+.fill span{
+    color: white;
+    font-size: 1.5em;
+    width: 40px;
+    padding: 8px;
+}
+.fill input{
+    font-size: 1em;
+    width: calc(100% - 47px);
+    transform: translateY(-4px);
+    height: 90%;
+    border: 0px;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #fad24185;
+}
+
+input[type=submit]{
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: #FAD341;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+input[type=submit]:hover{
+    background-color: #FA7841;
+}
+.button{
+    display: block;
+    text-align: center;
+    font-size: 1em ;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px 0px;
+}
+.button span{
+    font-size: 0.8em;
+    transform: translateY(2px);
+}    
+.button:hover{
+    background-color: #fa7841ce;
+}
+

@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/query.css">
 </head>
 <body>
-    
+   <main>
+    <section id="login">
+        <div id="img"></div>
+        <div id="form">
+            <h1>Login</h1>
+            <p>Seja bem vindo!</p>
+            <form action="login.php" method="post" autocomplete="on">
+                <div class="fill">
+                    <span class="material-icons">person</span>
+                    <input type="email" name="user" id="iuser" placeholder="Seu e-mail" autocomplete="email" required> 
+                    <label for="iuser">Login</label>
+                </div>
+                <div class="fill">
+                    <span class="material-icons">vpn_key</span>
+                    <input type="password" name="pass" id="ipass" placeholder="Sua senha" required minlength="8" maxlength="20"> 
+                    <label for="ipass">Senha</label>
+                </div>
+                <input type="submit" value="Entrar">
+                <a class="button" href="#">Esqueçi a senha <span class="material-icons">mail</span></a>
+            </form>
+        </div>
+    </section>
+   </main>
 </body>
 </html>

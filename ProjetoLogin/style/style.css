@@ -53,6 +53,7 @@ div#form h1{
 div#form p{
     font-size: 1em;
     text-align: center;
+    padding-bottom: 5px;
 }
 .fill{
     background-color:#FA7841;
@@ -74,12 +75,11 @@ div#form p{
 .fill input{
     font-size: 1em;
     width: calc(100% - 47px);
-    transform: translateY(-4px);
     height: 90%;
     border: 0px;
     border-radius: 6px;
     padding: 5px;
-    background-color: #fad24185;
+    background-color: #fad24185; transform: translateY(-4px);
 }
 
 input[type=submit]{

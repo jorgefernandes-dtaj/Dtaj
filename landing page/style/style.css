@@ -1,13 +1,20 @@
-@charset "utf-8";
+@charset "UTF-8";
 
+/*imports*/
 @font-face {
     font-family:'font-main';
-    src:url(../fonte/Satisfy-Regular.ttf) format(truetype) ;
+    src:url(../fonte/Satisfy-Regular.ttf) format(truetype) ; 
 }
 @font-face {
-    font-family:'font-name';
-    src:url(../fonte/OleoScript-Bold.ttf) format(truetype);
+    font-family:'font-open';
+    src:url(../fonte/Besley-Regular.ttf) format(truetype);
 }
+@font-face {
+    font-family:'font-open-bold';
+    src:url(../fonte/Besley-ExtraBold.ttf) format(truetype);
+}
+
+/*querys*/
 @media screen and (max-width: 600px) {
     h1 ,.presentation-b > p{
         font-size: 2em; 
@@ -24,65 +31,152 @@
         font-size: 3.2em;
     }       
 }
+
+/*reset*/
  *{
     margin:0;
     padding: 0;
-    font-family: font-main, serif;
+    font-family: font-main, Arial, Helvetica, sans-serif;
  }
-/* Fundo */
 
-body{
+ body, html{
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: radial-gradient(ellipse at center, #ECFCFF 10%,#B2FCFF 30%,#5EDFFF 35%,#3E64FF 70%);
+ }
+
+ /* Fundo */
+ body{
+     background-image: radial-gradient(ellipse at center, #ECFCFF 10%,#B2FCFF 30%,#5EDFFF 35%,#3E64FF 70%);
+ }
+
+ /* Página de abertura*/
+.open-conteiner{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
-/* Nuvem grande*/
 
 .presentation{
-    width: 100%;
-    max-width:1000px;
-    min-width:200px;
-    height: 100%;
-    background-image: url(../image/cloud.png); 
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-size:105%;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
+    width: 90vw;
+    max-width:800px;
+    background-color: #706d6d9c;  
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
-h1{
-    padding: 20px 40px;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-/*moldura*/
 
-.presentation-b {
-    width: 90%;
-    max-width:1000px;
-    min-width:250px;
-    display: flex;
+h1{
+  font-family: font-open, 'Times New Roman', Times, serif;
+  font-size: 1.8em;
+  padding: 15px;
+  text-align: center;
+}
+strong{
+    font-family: font-open-bold, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: #1908b1;
+} 
+
+/*Animações de abertura*/
+.anime{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.anime div{
+    position: absolute;
+    right: -1000px;
+    background: url(../image/cloud.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+.anime-cloud1{
+    width: 40vw;
+    height: 20vw;
+    min-width: 400px;
+    min-height: 200px;
+    top: -50px;
+    animation: anime 15s infinite linear;
+  
+}
+.anime-cloud2{
+    width: 40vw;
+    height: 20vw;
+    min-width: 400px;
+    min-height: 200px;
+    top: 400px;
+    animation: anime 12s infinite linear;
+}
+.anime-cloud3{
+    width: 35vw;
+    height: 18vw;
+    min-width: 300px;
+    min-height: 150px;
+    top: 200px;
+    animation: anime 10s infinite linear;
+}
+.anime-cloud4{
+    width: 30vw;
+    height: 15vw;
+    min-width: 280px;
+    min-height: 140px;
+    top: 800px;
+    animation: anime 8s infinite linear;
+}
+.anime-cloud5{
+    width: 25vw;
+    height: 12.5vw;
+    min-width: 200px;
+    min-height: 100px;
+    top: 600px;
+    animation: anime 14s infinite linear;
+}
+
+@keyframes anime{
+    from {right: -1000px}
+    to {right: 100%}
+ 
+}
+
+/*botão de navegação*/
+.cloud-button{
+    border: 20px solid black;
+    border-image: url(../image/cloud.png) 25 fill;
+    background-color:transparent; 
+    display: flex;   
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
-    
-.presentation-b > p{
-    min-height:500px ;
-    padding: 10px, 20px;
-    background-color:transparent;
-    border: 40px solid black;
-    border-image: url(../image/cloud-mold4.png) 95 repeat;
-    text-indent: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
+
+button{
+    font-family: font-main,serif;
+    font-size: 1.6em;
+    background-color: transparent;
+    border: none;
+    width: 18vw;
+    height: 9vw;
+    min-width: 6em;
+    min-height: 3em; 
 }
+
+button:hover{ 
+    font-size: 2em;
+    color: #3E64FF;
+    width: 20vw;
+    height: 10vw; 
+    min-width: 7em;
+    min-height: 3.5em;
+    transition: .3s;  
+}
+
+
 
 
 .logo{
@@ -93,60 +187,9 @@ h1{
     width: 10em;
 }
 
-strong{
-    font-weight: bolder;
-    color: #3E64FF;
-    font-family: font-name, 'Times New Roman', Times, serif ;
-}
 
-/* Botão de navegaçao entre páginas */
 
-.cloud-button{
-    border: 20px solid black;
-    border-image: url(../image/cloud.png) 25 fill;
-    background-color:transparent; 
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    width: 18vw;
-    height: 9vw;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    min-width: 8em;
-    min-height: 4em; 
-}
 
-button{
-    font-family: font-main,serif;
-    font-size: 1.8em;
-    background-color: transparent;
-    border: none;
-}
-.cloud-button:hover{
-    transition: .2s;
-    color: #3E64FF;
-    width: 20vw;
-    height: 10vw; 
-    min-width: 10em;
-    min-height: 5em;    
-}
-button:hover{
-    transition: .3s;
-    font-size: 2.2em;
-    color: #3E64FF;
-}
-
-#pc{
-    min-width: 70px;
-    width: 20vw;
-    max-width: 200px;
-    position:absolute;
-    left: 20px;
-    bottom: 5px;   
-}
-
-/* Link igual ao botão de navegação*/
 
 a{
     text-decoration: none;
@@ -215,4 +258,46 @@ ul{
 li{
    list-style-type:"\2605"; 
    font-family: font-main; 
+}
+/*moldura*/
+
+.presentation-b {
+    width: 90%;
+    max-width:1000px;
+    min-width:250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.presentation-b > p{
+    min-height:500px ;
+    padding: 10px, 20px;
+    background-color:transparent;
+    border: 40px solid black;
+    border-image: url(../image/cloud-mold4.png) 95 repeat;
+    text-indent: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.logo{
+    width: 3em ;
+    opacity: 0.7;
+}
+.logom{
+    width: 10em;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #3E64FF;
 }

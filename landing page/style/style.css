@@ -136,8 +136,7 @@ strong{
 .cloud-button{
     border: 20px solid black;
     border-image: url(../image/cloud.png) 25 fill;
-    background-color:transparent; 
-    display: flex;   
+    background-color:transparent;   
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -151,8 +150,10 @@ button{
     background-color: transparent;
     border: none;
     width: 18vw;
-    height: 9vw;
+    max-width: 12em;
     min-width: 6em;
+    height: 9vw;
+    max-height: 6em;
     min-height: 3em; 
     animation: blink 2s infinite ease-in-out;
 }
@@ -161,11 +162,12 @@ button:hover{
     font-size: 2em;
     color: #3E64FF;
     width: 20vw;
-    height: 10vw; 
+    max-width: 14em;
     min-width: 7em;
-    min-height: 3.5em;
-    transition: .3s;  
-    
+    height: 10vw;
+    max-height: 8em;
+    min-height: 4em; 
+    transition: .3s;    
 }
 
 @keyframes blink{
@@ -176,12 +178,17 @@ button:hover{
 /* Página do menu and Projets*/
 
 .menu-conteiner{
+ position: relative;
+ top: 50%;
+ left:50%;
+ transform: translate(-50%,-50%);
  width: 100vw;
- max-width: 1000px;
- height: 100%;
+ max-width: 1200px;
+ height: 600px;
  display: flex;
  align-items: center;
- justify-items:center; 
+ justify-items: center;
+ justify-content:center; 
  flex-wrap: wrap;
  overflow-x: hidden;
 }
@@ -192,16 +199,16 @@ button:hover{
     min-height: 170px ;
     min-width: 250px;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;   
     flex-wrap: wrap;
     margin: 30px 5px;
    }
 .menu:hover{
-    transition: .2s;
-    width: 20vw;
-    min-height: 180px ;
-    min-width: 260px;
+    transition: .4s;
+    width: 18vw;
+    height: 190px;
+   
 }
 h2{
    font-family: font-main, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -249,7 +256,7 @@ a:hover{
     width: 73px;  
 }
 .menu img.git{
-    width: 55px;  
+    width: 60px;  
 }
 .menu img.github{
     width: 80px;  
@@ -262,83 +269,42 @@ a:hover{
 }
 .menu li{
     font-family: font-open, Arial, Helvetica, sans-serif;
+    list-style-type:"\2605"; 
 }
 
+/* Interesses*/
 
-
-
-
-h2:hover > p{
-    display: block;
-}
-h2:hover{
-    
-}
-
-ul{
-}
-li{
-   list-style-type:"\2605"; 
-   font-family: font-main; 
-}
-/*moldura*/
-
-
-.presentation-b {
-    width: 90%;
-    max-width:1000px;
-    min-width:250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-    
-.presentation-b > p{
-    min-height:500px ;
-    padding: 10px, 20px;
-    background-color:transparent;
-    border: 40px solid black;
-    border-image: url(../image/cloud-mold4.png) 95 repeat;
-    text-indent: 20px;
+h2{
     text-align: center;
-    display: flex;
-    align-items: center;
 }
-
-
-.logo{
-    width: 3em ;
-    opacity: 0.7;
+h2 p{
+    display: none ;
+    font-family: fonte-main, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px 25px;
 }
-.logom{
-    width: 10em;
+.hide{
+    overflow-x: hidden;
 }
-
-
-
-
-
-a{
-    text-decoration: none;
+.hide:hover{
+    width: 420px;
+    height: 250px;
+    transition: .5s;
 }
-a:hover{
-    color: #3E64FF;
-}
-.logo{
-    width: 3em ;
-    opacity: 0.7;
-}
-.logom{
-    width: 10em;
-}
+.hide:hover  p{
+    display: block;
+
+}    
 
 
 
 
 
-a{
-    text-decoration: none;
-}
-a:hover{
-    color: #3E64FF;
-}
+
+
+
+
+
+
+
+

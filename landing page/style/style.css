@@ -14,13 +14,13 @@
     src:url(../fonte/Besley-ExtraBold.ttf) format(truetype);
 }
  
-/* query*/
-
-@media screen and (min-width: 800px)  {
-    .about p{
-        font-size: 1.5em;
-    }    
-}
+/*Query
+@media only screen and (min-width: 840px) {
+    .menu-conteiner {
+      background-color: lightblue;
+      height: 500px;
+    }
+  }*/   
 
 /*reset*/
  *{
@@ -78,7 +78,7 @@ strong{
 }
 .anime div{
     position: absolute;
-    right: -1000px;
+    right: -300px;
     background: url(../image/cloud.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@ strong{
 }
 
 @keyframes anime{
-    from {right: -1000px}
+    from {right: -300px}
     to {right: 100%}
  
 }
@@ -177,11 +177,11 @@ button:hover{
 
 .menu-conteiner{
  width: 100vw;
- max-width: 1400px;
- height: 100vh;
+ max-width: 1000px;
+ height: 100%;
  display: flex;
  align-items: center;
- justify-content: center;   
+ justify-items:center; 
  flex-wrap: wrap;
  overflow-x: hidden;
 }
@@ -192,10 +192,10 @@ button:hover{
     min-height: 170px ;
     min-width: 250px;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;   
     flex-wrap: wrap;
-    margin: 5px 15px;
+    margin: 30px 5px;
    }
 .menu:hover{
     transition: .2s;
@@ -245,9 +245,16 @@ a:hover{
 .menu img.css{
     width: 50px;  
 }
- .menu img.js{
+.menu img.js{
     width: 73px;  
 }
+.menu img.git{
+    width: 55px;  
+}
+.menu img.github{
+    width: 80px;  
+}
+
 .soft{
     display: flex;
     flex-direction: column;
@@ -275,6 +282,7 @@ li{
    font-family: font-main; 
 }
 /*moldura*/
+
 
 .presentation-b {
     width: 90%;

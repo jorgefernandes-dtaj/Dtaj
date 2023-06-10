@@ -182,7 +182,7 @@ button:hover{
  top: 50%;
  left:50%;
  transform: translate(-50%,-50%);
- width: 100vw;
+ width: 100%;
  max-width: 1200px;
  height: 100%;
  display: flex;
@@ -191,7 +191,6 @@ button:hover{
  justify-content:center; 
  flex-wrap: wrap;
  overflow-x: hidden;
- padding: 100px 1px;
 }
 
 .menu{
@@ -203,7 +202,7 @@ button:hover{
     align-items: center;
     justify-content: center;   
     flex-wrap: wrap;
-    margin: 30px 5px;
+    margin: 20px 5px;
    }
 .menu:hover{
     transition: .4s;

@@ -293,9 +293,17 @@ h2 p{
 }
 .hide:hover  p{
     display: block;
+    color: black;
+} 
+.hide:hover > h2{
+    color: #1908b1;
+}   
 
-}    
+/* Contatos */
 
+.logom{
+    width: 150px;
+}
 
 
 

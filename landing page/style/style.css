@@ -13,25 +13,17 @@
     font-family:'font-open-bold';
     src:url(../fonte/Besley-ExtraBold.ttf) format(truetype);
 }
+ 
+/* query*/
 
-/*querys*/
-@media screen and (max-width: 600px) {
-    h1 ,.presentation-b > p{
-        font-size: 2em; 
+@media screen and (min-width: 80px)  {
+    p{
+        font-size: 2em;
     }
-}
-@media screen and (min-width: 601px) {
-    h1 ,.presentation-b > p {
-        font-size: 2.5em; 
-    }
-}
+    
+    };
 
-@media screen and (min-width: 1000px) {
-    h1, .presentation-b > p{
-        font-size: 3.2em;
-    }       
-}
-
+*/
 /*reset*/
  *{
     margin:0;
@@ -164,6 +156,7 @@ button{
     height: 9vw;
     min-width: 6em;
     min-height: 3em; 
+    animation: blink 2s infinite ease-in-out;
 }
 
 button:hover{ 
@@ -174,83 +167,80 @@ button:hover{
     min-width: 7em;
     min-height: 3.5em;
     transition: .3s;  
+    
 }
 
-
-
-
-.logo{
-    width: 3em ;
-    opacity: 0.7;
-}
-.logom{
-    width: 10em;
+@keyframes blink{
+    from {color: black}
+    to {color: #3E64Fd}
 }
 
+/* Página do menu */
 
+.menu-conteiner{
+ width: 100vw;
+ max-width: 1400px;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;   
+ flex-wrap: wrap;
+ overflow-x: hidden;
+}
 
-
-
+.menu{
+    border-image: url(../image/cloud.png) 1 fill;
+    width: 17vw;
+    min-height: 170px ;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    flex-wrap: wrap;
+    margin: 5px 15px;
+   }
+.menu:hover{
+    transition: .2s;
+    width: 20vw;
+    min-height: 180px ;
+    min-width: 260px;
+}
+h2{
+   font-family: font-main, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 2em;
+}
 a{
     text-decoration: none;
 }
 a:hover{
     color: #3E64FF;
 }
+ 
+/* About me */
 
-/* Página do menu */
-
-/* Nuvem pequena
-com uma tela muito estreita desapareçe uma nuvem ???*/
-
-.grid{
- height: 50%; /*fix*/
- width: 80%;
- display: flex;
- align-items: center;
- justify-content: center;   
- flex-wrap: wrap;
- flex-direction: row;
-}
-
-.menu{
-    border: 30px solid transparent;
-    border-image: url(../image/cloud.png) 50 fill;
-    background-color: transparent;
-    width: 20vw;
-    min-width: 250px;;
-    height: 10em;
+.about{
+    width: 85vw;
+    max-width: 600px ;
+    padding:50px ;
+    background-color:transparent;
+    border: 1px solid black;
+    border-image: url(../image/cloud-mold4.png) 1 fill;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column;   
-}
-.menu:hover{
-    transition: .3s;
-    width: 25vw;
-    height: 12.5vw;
-    min-height: 180px;
-}
-h2{
-   font-family: font-main, serif;
-   font-size: 2em;
-   margin:0;
-   padding:0;
-   text-align: center;   
+    justify-content: center;
 }
 
-h2 > p{
-font-family: font-main, sans-serif;
-font-weight: lighter;
- display: none;
- font-size: 0.7em;
- color: black;
+p{
+    font-size: 1.2em;
 }
+
 h2:hover > p{
     display: block;
 }
 h2:hover{
-    color:#3E64FF;
+    
 }
 
 ul{
@@ -283,6 +273,24 @@ li{
 }
 
 
+.logo{
+    width: 3em ;
+    opacity: 0.7;
+}
+.logom{
+    width: 10em;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #3E64FF;
+}
 .logo{
     width: 3em ;
     opacity: 0.7;

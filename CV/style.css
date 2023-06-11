@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+:root{
+
+--ff-main: 'system-ui, sans-serif';
+--ff-alt: 'Comicsans, serif';
+
+--fs-S: 0.8rem;
+--fs-M: 1.2rem;
+--fs-L: 2rem;
+--fs-XL: 3rem;
+
+--clr-1:
+--clr-2:
+--clr-3:
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--ff-main)
+    font-size: 2em;
+    line-height: 1.4;
+    box-sizing: border-box;
+    color-scheme: dark ,light;
+}
+
+h1{
+    font-family: var(--ff-alt);
+    font-size: var(--fs-XL);
+    color: brown;
+}
+p{
+    
+    font-size: var(--fs-M);
+    color: blue;
+
+}
